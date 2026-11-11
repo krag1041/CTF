@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【極秘】社内用タスク管理システム</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #00ff00;
+            padding: 50px;
+            text-align: center;
+        }
+        .container {
+            border: 2px dashed #00ff00;
+            padding: 30px;
+            display: inline-block;
+            background-color: #111;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+        h1 { color: #ff0055; text-shadow: 0 0 5px #ff0055; }
+        ul { text-align: left; list-style-type: "⚠️ "; }
+        li { margin: 10px 0; font-size: 1.1rem; }
+        .alert { color: #ffcc00; font-weight: bold; margin-top: 20px; }
+        button {
+            background-color: #00ff00; color: #000; border: none;
+            padding: 10px 20px; font-size: 1rem; cursor: pointer; font-weight: bold;
+        }
+        button:hover { background-color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>⚠️ セキュリティ警告 ⚠️</h1>
+        <p>このページは開発中の「社内ポータル（テスト環境）」です。</p>
+        
+        <hr color="#00ff00">
+
+        <h3>現在の未対応タスク（至急）</h3>
+        <ul>
+            <li>本番環境のデータベースパスワードを変更する（初期設定のまま）</li>
+            <li><s>前田さんがWebサイトの背景に犬の画像を勝手に入れるバグを直す</s></li>
+            <li><strong>【重要】コメントにFlagを書いたまま放置しているので消す</strong></li>
+        </ul>
+
+        <p class="alert">※注意：開発者ツールの利用には気を付けて。</p>
+        <br>
+        <button onclick="alert('テスト。ここにflagはありません。')">CTF（ボタンテスト）</button>
+    </div>
+
+    <!-- 
+        ==================================================
+        [開発者メモ]
+        本番環境にデプロイする前にこれ消さなきゃ。
+        CTFの運営から「ここにFlag隠して」って言われたもの。
+        
+        flag={archive}
+        
+        後で消そう。
+        ==================================================
+    -->
+
+    <script>
+        // おまけのひっかけ用（ソースを見た人をさらに笑わせる用）
+        console.log("ここ（コンソール）を見てくれた君、ありがとう！");
+        console.log("でもFlagはここじゃないんだ。上のHTMLコメントをよく読んでみてね。");
+    </script>
+</body>
+</html>
